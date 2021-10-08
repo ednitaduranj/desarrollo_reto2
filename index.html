@@ -4,21 +4,24 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script type="text/javascript" src="main.js"></script>
 
+  
   <title>Reto 2 - Desarrollo USA</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <h1>Prueba de Manejo de CRUD - Reto02</h1>
-  <input type="number" id="miId" placeholder="Id">
-  <input type="text" id="name" placeholder="name">
+  <input type="number" id="id" placeholder="id">
+  <input type="text" id="name" placeholder="name" >
   <input type="text" id="email" placeholder="email">
   <input type="number" id="age" placeholder="age">
-
-<button onclick="registro()">okis</button>
-
+  <br>
+  <button onclick="obtenerItems()">VER ITEMS</button>
+  <button onclick="insertarItem()">INSERTAR</button>
+  <button onclick="actualizarItem()">ACTUALIZAR</button>
+  <button onclick="eliminarItem()">ELIMINAR</button>
+  <code id="consola"></code>
+  <script type="text/javascript" src="main.js"></script>
 </body>
 </html>
