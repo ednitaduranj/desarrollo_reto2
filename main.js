@@ -104,7 +104,7 @@ const MENSAJE_TABLA ='<tr><th>ID</th><th>MESSAGE</th>';
 
 function registrarMensaje(){
   registroMensajes = {
-    id: document.getElementById('id-message').value,
+    id: document.getElementById('id-mensaje').value,
     messagetext: document.getElementById('messageText').value,
   }
   console.log(registroMensajes);
@@ -114,7 +114,7 @@ function imprimirMensajes(items) {
   const tablaPreviaMensajes = document.getElementById('tablaMensaje');
   let tablaMensaje = MENSAJE_TABLA;
   items.forEach(item => {
-    const fila = '<tr><td>' + item.id + '</td><td>' + item.messagetext + '</td></tr>';
+    const fila = '<tr><td>' + item.id + '</td><td>' + item.messageText + '</td></tr>';
     tablaMensaje = tablaMensaje + fila;
     });
     tablaPreviaMensajes.innerHTML = tablaMensaje;
