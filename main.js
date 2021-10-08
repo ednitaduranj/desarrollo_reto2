@@ -6,6 +6,7 @@ let registro = {
 }
 
 const URL = 'https://gff9b1b4fc9ed2f-reto2.adb.sa-saopaulo-1.oraclecloudapps.com/ords/admin/client/client';
+const INICIO_TABLA = '<tr><th>ID</th><th>NAME</th><th>EMAIL</th><th>AGE</th></tr>';
 
 function registrar(){
   registro = {
@@ -20,7 +21,7 @@ function registrar(){
 function obtenerItems(){
   fetch(URL)
     .then(response => response.json())
-    .then(data => console.log(data.items));
+    .then(data => imprimirTabla(data.items) );
 }
 
 function insertarItem() {
@@ -33,14 +34,14 @@ function insertarItem() {
     }
   }).then(function (response) {
     if (response.ok) {
+      obtenerItems();
       return response.json();
     }
     return Promise.reject(response);
-  }).then(function (data) {
-    console.log(data);
   }).catch(function (error) {
     console.warn('Something went wrong.', error);
   });
+
 }
 
 function actualizarItem() {
@@ -53,11 +54,10 @@ function actualizarItem() {
     }
   }).then(function (response) {
     if (response.ok) {
+      obtenerItems();
       return response.json();
     }
     return Promise.reject(response);
-  }).then(function (data) {
-    console.log(data);
   }).catch(function (error) {
     console.warn('Something went wrong.', error);
   });
@@ -73,13 +73,23 @@ function eliminarItem() {
     }
   }).then(function (response) {
     if (response.ok) {
+      obtenerItems();
       return response.json();
     }
     return Promise.reject(response);
-  }).then(function (data) {
-    console.log(data);
   }).catch(function (error) {
     console.warn('Something went wrong.', error);
   });
+}
+
+
+function imprimirTabla(items) {
+  const tablaPrevia = document.getElementById('tabla');
+  let tabla = INICIO_TABLA;
+  items.forEach(item => {
+    const fila = '<tr><td>' + item.id + '</td><td>' + item.name + '</td><td>' + item.email  + '</td><td>' + item.age + '</td></tr>';
+    tabla = tabla + fila;
+  });
+  tablaPrevia.innerHTML = tabla;
 }
 
