@@ -17,6 +17,7 @@ function registrarMoto(){
     category_id: document.getElementById('category-id').value,
     name: document.getElementById('nameMoto').value, 
   }
+  console.log(registroMoto);
 }
 
 function imprimirMoto(items) {
@@ -45,7 +46,7 @@ function insertarMoto(){-
     }
   }).then(function (response) {
     if (response.ok) {
-      obtenerMensaje();
+      obtenerMoto();
       return response.json();
     }
     return Promise.reject(response);
@@ -65,7 +66,7 @@ function actualizarMoto() {
     }
   }).then(function (response) {
     if (response.ok) {
-      obtenerMensaje();
+      obtenerMoto();
       return response.json();
     }
     return Promise.reject(response);
@@ -84,7 +85,7 @@ function eliminarMoto() {
     }
   }).then(function (response) {
     if (response.ok) {
-      obtenerMensaje();
+      obtenerMoto();
       return response.json();
     }
     return Promise.reject(response);
