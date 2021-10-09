@@ -17,6 +17,7 @@ function registrarMoto(){
     category_id: document.getElementById('category-id').value,
     name: document.getElementById('nameMoto').value, 
   }
+  console.log(registroMoto);
 }
 
 function imprimirMoto(items) {
