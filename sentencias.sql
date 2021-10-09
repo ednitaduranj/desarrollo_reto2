@@ -41,12 +41,12 @@ SENTENCIAS MOTO
 SELECT * FROM MOTO
 //POST
 BEGIN
-UPDATE MOTO SET BRAND =:brand, MODEL=:model, CATEGORY_ID=:category_id, NAME=:name WHERE ID=:id;
+INSERT INTO MOTO (ID, BRAND, MODEL, CATEGORY_ID, NAME) VALUES (:id,:brand,:model,:category_id,:name);
 :status_code :=201;
 END;
 //PUT
 BEGIN
-INSERT INTO MOTO (ID, BRAND, MODEL, CATEGORY_ID, NAME) VALUES (:id,:brand,:model,:category_id,:name);
+UPDATE MOTO SET BRAND =:brand, MODEL=:model, CATEGORY_ID=:category_id, NAME=:name WHERE ID=:id;
 :status_code :=201;
 END;
 //DELETE
