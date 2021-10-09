@@ -45,7 +45,7 @@ function insertarMoto(){-
     }
   }).then(function (response) {
     if (response.ok) {
-      obtenerMensaje();
+      obtenerMoto();
       return response.json();
     }
     return Promise.reject(response);
@@ -65,7 +65,7 @@ function actualizarMoto() {
     }
   }).then(function (response) {
     if (response.ok) {
-      obtenerMensaje();
+      obtenerMoto();
       return response.json();
     }
     return Promise.reject(response);
@@ -84,7 +84,7 @@ function eliminarMoto() {
     }
   }).then(function (response) {
     if (response.ok) {
-      obtenerMensaje();
+      obtenerMoto();
       return response.json();
     }
     return Promise.reject(response);
