@@ -12,13 +12,13 @@
 <body>
 
   <h1>Prueba de Manejo de CRUD - Reto02</h1>
-  <h2>Registro de Clientes</h2>> 
+  <h2>Registro de Clientes</h2>
   <input type="number" id="id" placeholder="id">
   <input type="text" id="name" placeholder="name" >
   <input type="text" id="email" placeholder="email">
   <input type="number" id="age" placeholder="age">
   <br>
-  <button onclick="obtenerItems()">VER ITEMS</button>
+  <button onclick="obtenerItems()">VER CLIENTE</button>
   <button onclick="insertarItem()">INSERTAR</button>
   <button onclick="actualizarItem()">ACTUALIZAR</button>
   <button onclick="eliminarItem()">ELIMINAR</button>
@@ -28,7 +28,7 @@
 
   <h2>Registro de Mensajes</h2>
   <input type="number" id="id-message" placeholder="id">
-  <input type="text" id="messageText" placeholder="escribe tu mensaje" >
+  <input type="text" id="messageText" placeholder="messageText" >
   <br>
   <button onclick="obtenerMensaje()">VER MENSAJES</button>
   <button onclick="insertarMensaje()">INSERTAR</button>
@@ -36,6 +36,21 @@
   <button onclick="eliminarMensaje()">ELIMINAR</button>
 
   <table id="tablaMensaje">
+  </table>
+
+  <h2>Registro de Motocicletas</h2> 
+  <input type="number" id="id-moto" placeholder="id">
+  <input type="text" id="brand" placeholder="brand" >
+  <input type="number" id="model" placeholder="model">
+  <input type="number" id="category-id" placeholder="category-id">
+  <input type="text" id="nameMoto" placeholder="name">
+  <br>
+  <button onclick="obtenerMoto()">VER MOTO</button>
+  <button onclick="insertarMoto()">INSERTAR</button>
+  <button onclick="actualizarMoto()">ACTUALIZAR</button>
+  <button onclick="eliminarMoto()">ELIMINAR</button>
+
+  <table id="tablaMoto">
   </table>
 
   <script type="text/javascript" src="main.js"></script>

@@ -1,0 +1,56 @@
+SENTENCIAS CLIENTE
+
+//GET
+SELECT * FROM CLIENT
+//POST 
+BEGIN
+INSERT INTO CLIENT (ID, NAME, EMAIL, AGE) VALUES (:id,:name,:email,:age);
+:status_code :=201;
+END;
+//BEGIN
+UPDATE CLIENT SET NAME =:name, EMAIL =:email, AGE=:age WHERE ID=:id;
+:status_code :=201;
+END;
+//DELETE
+BEGIN
+DELETE FROM CLIENT WHERE ID= :id;
+:status_code:=204;
+END;
+
+SENTENCIAS MENSAJES
+//GET
+SELECT * FROM MESSAGE
+//POST
+BEGIN
+INSERT INTO MESSAGE (ID, MESSAGETEXT) VALUES (:id,:messagetext);
+:status_code :=201;
+END;
+//PUT
+BEGIN
+UPDATE MESSAGE SET MESSAGETEXT= :messagetext WHERE ID = :id;
+:status_code:=201;
+END;
+//DELETE
+BEGIN
+DELETE FROM MESSAGE WHERE ID= :id;
+:status_code:=204;
+END;
+
+SENTENCIAS MOTO
+//GET
+SELECT * FROM MOTO
+//POST
+BEGIN
+UPDATE MOTO SET BRAND =:brand, MODEL=:model, CATEGORY_ID=:category_id, NAME=:name WHERE ID=:id;
+:status_code :=201;
+END;
+//PUT
+BEGIN
+INSERT INTO MOTO (ID, BRAND, MODEL, CATEGORY_ID, NAME) VALUES (:id,:brand,:model,:category_id,:name);
+:status_code :=201;
+END;
+//DELETE
+BEGIN
+DELETE FROM MOTO WHERE ID= :id;
+:status_code:=204;
+END;

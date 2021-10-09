@@ -5,7 +5,7 @@ let registro = {
   id: 0,
   name: '',
   email: '',
-  age: 0
+  age: 0,
 }
 
 function registrar(){
